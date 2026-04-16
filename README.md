@@ -43,7 +43,7 @@
 
 ```bash
 # 克隆项目
-git clone <YOUR_REPO_URL>
+git clone https://github.com/mkr-0920/ipv6_proxy_pool_rust.git
 cd ipv6_proxy_pool
 
 # 编译 Release 版本
@@ -71,9 +71,6 @@ Networkname = eth0
 port = 1080
 ```
 
-> ⚠️ `config.ini` 存放本地环境信息，建议加入 `.gitignore`
-> 可提供 `config.ini.example` 作为示例文件
-
 ---
 
 ### 3. 运行程序
@@ -100,7 +97,7 @@ sudo ./target/release/ipv6_proxy_pool
 可以使用 CURL 测试 SOCKS5 出口 IP：
 
 ```bash
-curl --socks5 <服务器IP>:1080 https://api64.ipify.org
+curl --socks5 127.0.0.1:1080 https://api64.ipify.org
 ```
 
 多次执行输出的 IPv6 会不断变化，即表示代理池正常工作。
